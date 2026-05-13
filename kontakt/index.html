@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Kontakt und Reservierung bei der Pizzeria Marienkäfer Berlin – Marienstraße 18, 10117 Berlin. Telefon: 030 323 035 32. Tisch reservieren oder Nachricht senden.">
+  <title>Kontakt &amp; Reservierung | Pizzeria Marienkäfer Berlin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="navbar solid" id="navbar" role="navigation" aria-label="Hauptnavigation">
+    <div class="container">
+      <a href="../" class="navbar-brand" aria-label="Zur Startseite">
+        <img src="../Bilder/Logo.PNG"
+             alt="Pizzeria Marienkäfer Logo">
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-label="Menü öffnen">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="../"             class="nav-link" data-page="home">Start</a></li>
+        <li><a href="../about/"       class="nav-link" data-page="about">Über uns</a></li>
+        <li><a href="../speisekarte/" class="nav-link" data-page="speisekarte">Speisekarte</a></li>
+        <li><a href="../kontakt/"     class="nav-link" data-page="kontakt">Kontakt</a></li>
+        <li>
+          <a href="https://www.lieferando.de/speisekarte/muckrakers"
+             class="btn-liefern nav-link"
+             target="_blank" rel="noopener noreferrer">
+            🛵&nbsp; Lieferservice
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ===== PAGE HEADER ===== -->
+  <header class="page-header">
+    <div class="page-header-bg"
+         style="background-image: url('https://www.pizzeria-marienkaefer.de/wp-content/uploads/2022/11/bild4-marien.jpeg');"
+         role="img" aria-label="Pizzeria Marienkäfer Atmosphäre"></div>
+    <div class="page-header-overlay"></div>
+    <div class="page-header-content">
+      <span class="section-label">Schreiben Sie uns</span>
+      <h1>Kontakt &amp; Reservierung</h1>
+      <p>Wir freuen uns auf Ihre Nachricht – ob Reservierung, Event-Anfrage oder einfach Hallo.</p>
+    </div>
+  </header>
+
+  <!-- ===== CONTACT ===== -->
+  <main class="contact-page" id="main">
+    <div class="container">
+      <div class="contact-grid">
+
+        <!-- Form -->
+        <div class="contact-form-wrap fade-in">
+          <h2>Nachricht senden</h2>
+          <p>Füllen Sie das Formular aus – wir melden uns so schnell wie möglich bei Ihnen.</p>
+
+          <div class="form-success" id="formSuccess">
+            ✅ Vielen Dank! Ihre Nachricht wurde erfolgreich gesendet. Wir melden uns bald bei Ihnen.
+          </div>
+          <div class="form-error" id="formError">
+            ⚠️ Es ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut oder schreiben Sie uns direkt an
+            <a href="mailto:kontakt@pizzeria-marienkaefer.de">kontakt@pizzeria-marienkaefer.de</a>.
+          </div>
+
+          <form id="contactForm" novalidate>
+            <!-- FormSubmit honeypot (hidden) -->
+            <input type="text" name="_honey" style="display:none" tabindex="-1">
+            <input type="hidden" name="_subject" value="Neue Nachricht vom Website-Kontaktformular">
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Ihr Name *</label>
+                <input type="text" id="name" name="name" placeholder="Max Mustermann" required>
+              </div>
+              <div class="form-group">
+                <label for="email">E-Mail-Adresse *</label>
+                <input type="email" id="email" name="email" placeholder="max@example.com" required>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="phone">Telefonnummer</label>
+                <input type="tel" id="phone" name="phone" placeholder="+49 30 …">
+              </div>
+              <div class="form-group">
+                <label for="betreff">Betreff *</label>
+                <input type="text" id="betreff" name="betreff" placeholder="Reservierung, Event, Frage …" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="date">Gewünschtes Datum (bei Reservierung)</label>
+              <input type="date" id="date" name="datum">
+            </div>
+
+            <div class="form-group">
+              <label for="message">Ihre Nachricht *</label>
+              <textarea id="message" name="nachricht"
+                placeholder="Ihre Nachricht, z. B. Anzahl der Personen, besondere Wünsche …"
+                required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center; font-size:1rem;">
+              Nachricht senden →
+            </button>
+          </form>
+        </div>
+
+        <!-- Info -->
+        <div class="contact-info-stack">
+
+          <div class="contact-card fade-in delay-1">
+            <div class="contact-card-icon">📍</div>
+            <div class="contact-card-body">
+              <h4>Adresse</h4>
+              <p>
+                Pizzeria Marienkäfer<br>
+                Marienstraße 18<br>
+                10117 Berlin-Mitte
+              </p>
+              <a href="https://maps.google.com/?q=Marienstra%C3%9Fe+18,+10117+Berlin"
+                 target="_blank" rel="noopener" style="color:var(--primary); margin-top:8px; display:inline-block;">
+                In Google Maps öffnen ↗
+              </a>
+            </div>
+          </div>
+
+          <div class="contact-card fade-in delay-2">
+            <div class="contact-card-icon">📞</div>
+            <div class="contact-card-body">
+              <h4>Telefon &amp; E-Mail</h4>
+              <p>
+                <a href="tel:+493032303532">030 – 323 035 32</a><br>
+                <a href="mailto:kontakt@pizzeria-marienkaefer.de">kontakt@pizzeria-marienkaefer.de</a>
+              </p>
+            </div>
+          </div>
+
+          <div class="contact-card fade-in delay-3">
+            <div class="contact-card-icon">🕐</div>
+            <div class="contact-card-body">
+              <h4>Öffnungszeiten</h4>
+              <table class="hours-table">
+                <tr><td>Montag – Freitag</td><td><strong>10:00 – 24:00 Uhr</strong></td></tr>
+                <tr><td>Samstag</td><td><strong>12:00 – 24:00 Uhr</strong></td></tr>
+                <tr><td>Sonntag</td><td><strong>12:00 – 24:00 Uhr</strong></td></tr>
+              </table>
+            </div>
+          </div>
+
+          <div class="contact-card fade-in delay-4">
+            <div class="contact-card-icon">🛵</div>
+            <div class="contact-card-body">
+              <h4>Lieferservice</h4>
+              <p>Bestellen Sie bequem über Lieferando – frisch und schnell zu Ihnen nach Hause.</p>
+              <a href="https://www.lieferando.de/speisekarte/muckrakers"
+                 target="_blank" rel="noopener"
+                 class="btn btn-primary" style="margin-top:14px; display:inline-flex;">
+                Jetzt bestellen ↗
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Google Maps Embed -->
+      <div style="margin-top: 64px; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md);">
+        <iframe
+          title="Pizzeria Marienkäfer auf der Karte"
+          src="https://maps.google.com/maps?q=Marienstra%C3%9Fe+18,+10117+Berlin&t=&z=15&ie=UTF8&iwloc=&output=embed"
+          width="100%"
+          height="400"
+          style="border:0; display:block;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="../Bilder/Logo.PNG"
+               alt="Pizzeria Marienkäfer Logo">
+          <p>
+            Authentische italienische Küche mitten in Berlin –
+            frisch, herzlich und glücklich machend.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="../">Start</a></li>
+            <li><a href="../about/">Über uns</a></li>
+            <li><a href="../speisekarte/">Speisekarte</a></li>
+            <li><a href="../kontakt/">Kontakt &amp; Reservierung</a></li>
+            <li><a href="https://www.lieferando.de/speisekarte/muckrakers" target="_blank" rel="noopener">Lieferservice ↗</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Öffnungszeiten</h4>
+          <div class="hours-row"><span>Mo – Fr</span><strong>10:00 – 24:00</strong></div>
+          <div class="hours-row"><span>Sa – So</span><strong>12:00 – 24:00</strong></div>
+        </div>
+        <div class="footer-col">
+          <h4>Kontakt</h4>
+          <div class="footer-contact-item">
+            <span class="footer-contact-icon">📍</span>
+            <span>Marienstraße 18<br>10117 Berlin-Mitte</span>
+          </div>
+          <div class="footer-contact-item">
+            <span class="footer-contact-icon">📞</span>
+            <a href="tel:+493032303532">030 – 323 035 32</a>
+          </div>
+          <div class="footer-contact-item">
+            <span class="footer-contact-icon">✉️</span>
+            <a href="mailto:kontakt@pizzeria-marienkaefer.de">kontakt@pizzeria-marienkaefer.de</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;width:100%;">
+        <p>© 2025 Pizzeria Marienkäfer · Berlin Mitte. Alle Rechte vorbehalten.</p>
+        <nav class="footer-links">
+          <a href="../impressum/">Impressum</a>
+          <a href="../datenschutz/">Datenschutz</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" aria-label="Zum Seitenanfang">↑</button>
+  <script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Über uns – Pizzeria Marienkäfer Berlin Mitte. Lernen Sie Sergio und sein Team kennen. Frische Küche, herzliche Atmosphäre, mitten in Berlin.">
+  <title>Über uns | Pizzeria Marienkäfer Berlin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .about-page { background: var(--bg); padding: 80px 0; }
+
+    .about-intro {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 72px;
+      align-items: center;
+      margin-bottom: 100px;
+    }
+    .about-intro-text .section-title { margin-bottom: 20px; }
+    .about-intro-text p {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      margin-bottom: 18px;
+      line-height: 1.85;
+    }
+    .about-intro-images {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 240px 240px;
+      gap: 14px;
+    }
+    .about-intro-images img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-md);
+    }
+    .about-intro-images img:first-child {
+      grid-column: 1 / -1;
+      height: 280px;
+    }
+
+    .quote-block {
+      background: var(--primary-dark);
+      border-radius: var(--radius-lg);
+      padding: 64px 80px;
+      text-align: center;
+      margin-bottom: 100px;
+      position: relative;
+      overflow: hidden;
+    }
+    .quote-block::before {
+      content: '„';
+      font-family: var(--font-heading);
+      font-size: 16rem;
+      color: rgba(255,255,255,0.04);
+      position: absolute;
+      top: -40px; left: 20px;
+      line-height: 1;
+    }
+    .quote-block blockquote {
+      font-family: var(--font-heading);
+      font-style: italic;
+      font-size: clamp(1.4rem, 3vw, 2rem);
+      color: var(--white);
+      line-height: 1.5;
+      margin-bottom: 24px;
+      position: relative;
+      z-index: 1;
+    }
+    .quote-block cite {
+      font-size: 0.9rem;
+      color: var(--accent-light);
+      font-style: normal;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    .values-section { margin-bottom: 100px; }
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      margin-top: 56px;
+    }
+    .value-card {
+      background: var(--white);
+      border-radius: var(--radius-md);
+      padding: 40px 32px;
+      box-shadow: var(--shadow-sm);
+      border-top: 4px solid var(--accent);
+      transition: all var(--transition);
+    }
+    .value-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-md);
+    }
+    .value-icon { font-size: 2.5rem; margin-bottom: 20px; }
+    .value-card h3 {
+      font-family: var(--font-heading);
+      font-size: 1.3rem;
+      color: var(--dark);
+      margin-bottom: 12px;
+    }
+    .value-card p {
+      font-size: 0.93rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    .team-section { margin-bottom: 80px; }
+    .team-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 72px;
+      align-items: center;
+    }
+    .team-image img {
+      width: 100%;
+      height: 420px;
+      object-fit: cover;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-lg);
+    }
+    .team-text .section-title { margin-bottom: 20px; }
+    .team-text p {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      margin-bottom: 18px;
+      line-height: 1.85;
+    }
+
+    @media (max-width: 900px) {
+      .about-intro   { grid-template-columns: 1fr; }
+      .about-intro-images { order: -1; }
+      .team-content  { grid-template-columns: 1fr; }
+      .values-grid   { grid-template-columns: repeat(2, 1fr); }
+      .quote-block   { padding: 48px 32px; }
+    }
+    @media (max-width: 600px) {
+      .values-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="navbar solid" id="navbar" role="navigation" aria-label="Hauptnavigation">
+    <div class="container">
+      <a href="../" class="navbar-brand" aria-label="Zur Startseite">
+        <img src="../Bilder/Logo.PNG" alt="Pizzeria Marienkäfer Logo">
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-label="Menü öffnen">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="../"             class="nav-link" data-page="home">Start</a></li>
+        <li><a href="../about/"       class="nav-link" data-page="about">Über uns</a></li>
+        <li><a href="../speisekarte/" class="nav-link" data-page="speisekarte">Speisekarte</a></li>
+        <li><a href="../kontakt/"     class="nav-link" data-page="kontakt">Kontakt</a></li>
+        <li>
+          <a href="https://www.lieferando.de/speisekarte/muckrakers"
+             class="btn-liefern nav-link"
+             target="_blank" rel="noopener noreferrer">
+            🛵&nbsp; Lieferservice
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ===== PAGE HEADER ===== -->
+  <header class="page-header">
+    <div class="page-header-bg"
+         style="background-image: url('https://www.pizzeria-marienkaefer.de/wp-content/uploads/2022/11/bild2-marien-1024x768.jpeg');"
+         role="img" aria-label="Pizzeria Marienkäfer Atmosphäre"></div>
+    <div class="page-header-overlay"></div>
+    <div class="page-header-content">
+      <span class="section-label">Unsere Geschichte</span>
+      <h1>Über uns</h1>
+      <p>Herzlich willkommen in der Pizzeria Marienkäfer – einem Ort, an dem Essen Freude macht.</p>
+    </div>
+  </header>
+
+  <!-- ===== CONTENT ===== -->
+  <main class="about-page" id="main">
+    <div class="container">
+
+      <!-- Intro -->
+      <div class="about-intro">
+        <div class="about-intro-text fade-in">
+          <span class="section-label">Herzlich Willkommen</span>
+          <h2 class="section-title">Glücklich essen in Berlin Mitte</h2>
+          <p>
+            Mitten im Herzen Berlins, in der Marienstraße 18, liegt die Pizzeria Marienkäfer –
+            ein Ort, an dem italienische Küchentradition auf Berliner Herzlichkeit trifft.
+            Seit unserer Gründung ist es unser Ziel, jeden Gast glücklich zu machen.
+          </p>
+          <p>
+            Was uns antreibt, ist die Leidenschaft für gutes Essen: frische Zutaten, täglich
+            selbst zubereitete Speisen und Gerichte, die mit Liebe gemacht werden.
+            Von der knusprigen Steinofenpizza über hausgemachte Pasta bis hin zu frischen
+            Salaten – bei uns steht Qualität an erster Stelle.
+          </p>
+          <p>
+            Unser liebevoll gestaltetes Interieur mit handgemachtem Dekor, warmen Farben und
+            einer entspannten Atmosphäre lädt ein, zu verweilen, zu genießen und den Alltag
+            hinter sich zu lassen.
+          </p>
+          <div style="display:flex; gap:16px; flex-wrap:wrap; margin-top:28px;">
+            <a href="../speisekarte/" class="btn btn-primary">Zur Speisekarte</a>
+            <a href="../kontakt/" class="btn btn-accent">Tisch reservieren</a>
+          </div>
+        </div>
+
+        <div class="about-intro-images fade-in delay-2">
+          <img src="https://www.pizzeria-marienkaefer.de/wp-content/uploads/2022/11/bild5-marien-1024x768.jpeg"
+               alt="Atmosphäre in der Pizzeria Marienkäfer" loading="lazy">
+          <img src="https://www.pizzeria-marienkaefer.de/wp-content/uploads/2022/11/bild3-marien.jpeg"
+               alt="Innenbereich der Pizzeria" loading="lazy">
+          <img src="https://www.pizzeria-marienkaefer.de/wp-content/uploads/2022/11/bild4-marien.jpeg"
+               alt="Details der Einrichtung" loading="lazy">
+        </div>
+      </div>
+
+      <!-- Quote -->
+      <div class="quote-block fade-in">
+        <blockquote>
+          „Wir heißen Euch in unserer Pizzeria Marienkäfer herzlich willkommen
+          und freuen uns darauf, Euch mit unseren Kreationen zu verwöhnen."
+        </blockquote>
+        <cite>— Sergio, Inhaber der Pizzeria Marienkäfer</cite>
+      </div>
+
+      <!-- Values -->
+      <div class="values-section">
+        <div class="text-center fade-in">
+          <span class="section-label">Was uns ausmacht</span>
+          <h2 class="section-title">Unsere Werte</h2>
+          <p class="section-subtitle">Drei Dinge stehen bei uns immer im Mittelpunkt – egal ob beim Mittagessen, Abendessen oder einer Feier.</p>
+        </div>
+        <div class="values-grid">
+          <div class="value-card fade-in delay-1">
+            <div class="value-icon">🍅</div>
+            <h3>Frische &amp; Qualität</h3>
+            <p>
+              Alle Speisen werden täglich frisch zubereitet. Wir verwenden ausschließlich
+              hochwertige Zutaten – von der selbst gemachten Tomatensauce bis zum frischen
+              Pizzateig aus dem Steinofen.
+            </p>
+          </div>
+          <div class="value-card fade-in delay-2">
+            <div class="value-icon">❤️</div>
+            <h3>Herzlichkeit</h3>
+            <p>
+              Bei uns ist jeder Gast willkommen. Sergio und sein Team legen größten Wert
+              darauf, dass sich jeder Besucher von Anfang an wohlfühlt – wie bei Freunden
+              zu Hause.
+            </p>
+          </div>
+          <div class="value-card fade-in delay-3">
+            <div class="value-icon">✨</div>
+            <h3>Atmosphäre</h3>
+            <p>
+              Handgemachtes Dekor, warme Farben, sanftes Licht und gelegentlich Live-Musik
+              schaffen eine Wohlfühlatmosphäre, in der man gerne länger bleibt.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Team -->
+      <div class="team-section">
+        <div class="team-content">
+          <div class="team-image fade-in">
+            <img src="https://www.pizzeria-marienkaefer.de/wp-content/uploads/2022/11/bild8-marien.jpeg"
+                 alt="Pizzeria Marienkäfer Team und Ambiente" loading="lazy">
+          </div>
+          <div class="team-text fade-in delay-2">
+            <span class="section-label">Das Team</span>
+            <h2 class="section-title">Mit Leidenschaft dabei</h2>
+            <p>
+              Hinter der Pizzeria Marienkäfer steht Sergio – ein Gastgeber aus Leidenschaft,
+              der seine Küche und sein Restaurant mit ganzem Herzen lebt. Gemeinsam mit
+              seinem eingespielten Team sorgt er täglich dafür, dass jeder Gast mit einem
+              Lächeln nach Hause geht.
+            </p>
+            <p>
+              Die Philosophie ist einfach: Gutes Essen, ehrliche Zutaten und echte
+              Gastfreundschaft. Keine Kompromisse bei der Qualität, kein Gast, der
+              sich nicht willkommen fühlt.
+            </p>
+            <p>
+              Ob zum schnellen Mittagessen, zum gemütlichen Abendessen zu zweit oder
+              für eine große Feier – die Marienkäfer ist immer die richtige Wahl.
+            </p>
+            <a href="../kontakt/" class="btn btn-primary" style="margin-top:8px;">
+              Jetzt Tisch reservieren
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="../Bilder/Logo.PNG" alt="Pizzeria Marienkäfer Logo">
+          <p>
+            Authentische italienische Küche mitten in Berlin –
+            frisch, herzlich und glücklich machend.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="../">Start</a></li>
+            <li><a href="../about/">Über uns</a></li>
+            <li><a href="../speisekarte/">Speisekarte</a></li>
+            <li><a href="../kontakt/">Kontakt &amp; Reservierung</a></li>
+            <li><a href="https://www.lieferando.de/speisekarte/muckrakers" target="_blank" rel="noopener">Lieferservice ↗</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Öffnungszeiten</h4>
+          <div class="hours-row"><span>Mo – Fr</span><strong>10:00 – 24:00</strong></div>
+          <div class="hours-row"><span>Sa – So</span><strong>12:00 – 24:00</strong></div>
+        </div>
+        <div class="footer-col">
+          <h4>Kontakt</h4>
+          <div class="footer-contact-item">
+            <span class="footer-contact-icon">📍</span>
+            <span>Marienstraße 18<br>10117 Berlin-Mitte</span>
+          </div>
+          <div class="footer-contact-item">
+            <span class="footer-contact-icon">📞</span>
+            <a href="tel:+493032303532">030 – 323 035 32</a>
+          </div>
+          <div class="footer-contact-item">
+            <span class="footer-contact-icon">✉️</span>
+            <a href="mailto:kontakt@pizzeria-marienkaefer.de">kontakt@pizzeria-marienkaefer.de</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;width:100%;">
+        <p>© 2025 Pizzeria Marienkäfer · Berlin Mitte. Alle Rechte vorbehalten.</p>
+        <nav class="footer-links">
+          <a href="../impressum/">Impressum</a>
+          <a href="../datenschutz/">Datenschutz</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" aria-label="Zum Seitenanfang">↑</button>
+  <script src="../js/main.js"></script>
+</body>
+</html>

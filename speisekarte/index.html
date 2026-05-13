@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Vollständige Speisekarte der Pizzeria Marienkäfer Berlin – Vorspeisen, Salate, Pizzen, Pasta, Getränke und Desserts mit Preisen.">
+  <title>Speisekarte | Pizzeria Marienkäfer Berlin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="navbar solid" id="navbar" role="navigation" aria-label="Hauptnavigation">
+    <div class="container">
+      <a href="../" class="navbar-brand" aria-label="Zur Startseite">
+        <img src="../Bilder/Logo.PNG"
+             alt="Pizzeria Marienkäfer Logo">
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-label="Menü öffnen">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="../"             class="nav-link" data-page="home">Start</a></li>
+        <li><a href="../about/"       class="nav-link" data-page="about">Über uns</a></li>
+        <li><a href="../speisekarte/" class="nav-link" data-page="speisekarte">Speisekarte</a></li>
+        <li><a href="../kontakt/"     class="nav-link" data-page="kontakt">Kontakt</a></li>
+        <li>
+          <a href="https://www.lieferando.de/speisekarte/muckrakers"
+             class="btn-liefern nav-link"
+             target="_blank" rel="noopener noreferrer">
+            🛵&nbsp; Lieferservice
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ===== PAGE HEADER ===== -->
+  <header class="page-header">
+    <div class="page-header-bg"
+         style="background-image: url('https://www.pizzeria-marienkaefer.de/wp-content/uploads/2023/09/pizza-image-overlay.png');"
+         role="img" aria-label="Pizza aus dem Steinofen"></div>
+    <div class="page-header-overlay"></div>
+    <div class="page-header-content">
+      <span class="section-label">Marienkäfer</span>
+      <h1>Unsere Speisekarte</h1>
+      <p>Frisch zubereitet, täglich wechselnde Angebote – entdecken Sie unsere Gerichte.</p>
+    </div>
+  </header>
+
+  <!-- ===== MENU ===== -->
+  <main class="menu-page" id="main">
+    <div class="container">
+
+      <!-- Tabs -->
+      <div class="menu-tabs" role="tablist" aria-label="Speisekategorien">
+        <button class="menu-tab active" data-target="vorspeisen" role="tab" aria-selected="true">🥙 Vorspeisen</button>
+        <button class="menu-tab" data-target="salate"    role="tab" aria-selected="false">🥗 Salate</button>
+        <button class="menu-tab" data-target="pizza"     role="tab" aria-selected="false">🍕 Pizza</button>
+        <button class="menu-tab" data-target="pasta"     role="tab" aria-selected="false">🍝 Pasta</button>
+        <button class="menu-tab" data-target="getraenke" role="tab" aria-selected="false">🥂 Getränke</button>
+        <button class="menu-tab" data-target="desserts"  role="tab" aria-selected="false">🍨 Desserts</button>
+      </div>
+
+      <!-- VORSPEISEN -->
+      <section class="menu-panel active" id="vorspeisen" role="tabpanel">
+        <h2 class="menu-section-heading">🥙 Vorspeisen</h2>
+        <div class="menu-items-grid">
+          <div class="menu-item">
+            <div class="menu-item-info">
+              <div class="menu-item-name">Bruschetta</div>
+              <div class="menu-item-desc">2 Scheiben hausgemachtes Brot mit Knoblauch, frischen Tomatenwürfeln, Zwiebeln und Kräutern</div>
+            </div>
+            <div class="menu-item-price">4,90 €</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-info">
+              <div class="menu-item-name">Focaccia</div>
+              <div class="menu-item-desc">Italienisches Fladenbrot mit Rosmarin und Oliven, frisch aus dem Ofen</div>
+            </div>
+            <div class="menu-item-price">4,90 €</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-info">
+              <div class="menu-item-name">Käseplatte</div>
+              <div class="menu-item-desc">Ausgewählte Käsesorten mit Feigen und Weintrauben</div>
+            </div>
+            <div class="menu-item-price">9,90 €</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-info">
+              <div class="menu-item-name">Bufala alla Caprese</div>
+              <div class="menu-item-desc">Büffelmozzarella mit Tomaten und hausgemachtem Basilikumpesto</div>
+            </div>
+            <div class="menu-item-price">10,90 €</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-info">
+              <div class="menu-item-name">Kleine Antipasti-Platte</div>
+              <div class="menu-item-desc">Blattsalat, Couscoussalat, Nudelsalat, Kartoffelsalat, gegrilltes Gemüse, Maultaschen, Halloumi, Bohnen, Käseaufstriche, Hummus</div>
+            </div>
+            <div class="menu-item-price">12,00 €</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-info">
+              <div class="menu-item-name">Große Antipasti-Platte</div>
+              <div class="menu-item-desc">Erweiterte Antipasti-Auswahl mit zusätzlichem Mozzarella und gefüllten Weinblättern – ideal zum Teilen</div>
+            </div>
+            <div class="menu-item-price">19,00 €</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SALATE -->
+      <section class="menu-panel" id="salate" role="tabpanel">
+        <h2 class="menu-section-heading">🥗 Salate</h2>
+        <div class="menu-items-grid">
+          <div class="menu-item">
+            <div class="menu-item-info">
+              <div class="menu-item-name">Naturaler Salat</div>
+              <div class="menu-item-desc">Gemischter Blattsalat mit Hausdressing</div>
+            </div>
+            <div class="menu-item-price">6,00 €</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-info">
+              <div class="menu-item-name">Halloumi Salat</div>
+              <div class="menu-item-desc">Blattsalat mit gegrilltem Halloumi und frischen Zutaten</div>
+            </div>
+            <div class="menu-item-price">8,00 €</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-info">
+              <div class="menu-item-name">Avocado Salat</div>
+              <div class="menu-item-desc">Blattsalat mit cremiger Avocado und Vinaigrette</div>
+            </div>
+            <div class="menu-item-price">8,90 €</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-info">
+              <div class="menu-item-name">Feta Salat</div>
+              <div class="menu-item-desc">Mediterraner Salat mit cremigem Fetakäse, Oliven und Tomaten</div>
+            </div>
+            <div class="menu-item-price">8,90 €</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-info">
+              <div class="menu-item-name">Ziegenkäse Salat</div>
+              <div class="menu-item-desc">Frischer Salat mit gebackenem Ziegenkäse und Honigdressing</div>
+            </div>
+            <div class="menu-item-price">8,90 €</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-info">
+              <div class="menu-item-name">Mozzarella Salat</div>
+              <div class="menu-item-desc">Blattsalat mit frischem Mozzarella, Kirschtomaten und Basilikum</div>
+            </div>
+            <div class="menu-item-price">8,90 €</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-info">
+              <div class="menu-item-name">Mozzarella Sticks Salat</div>
+              <div class="menu-item-desc">Salat mit knusprig panierten Mozzarella Sticks</div>
+            </div>
+            <div class="menu-item-price">8,90 €</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-info">
+              <div class="menu-item-name">Maultaschen Salat</div>
+              <div class="menu-item-desc">Blattsalat mit hausgemachten Maultaschen und Kräuterdressing</div>
+            </div>
+            <div class="menu-item-price">8,90 €</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-info">
+              <div class="menu-item-name">Marienkäfer Salat</div>
+              <div class="menu-item-desc">Gemischter Blattsalat mit Birnen, Artischockenherzen und karamellisierten Walnüssen – unser Signature-Salat</div>
+            </div>
+            <div class="menu-item-price">8,90 €</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-info">
+              <div class="menu-item-name">Hähnchen Salat</div>
+              <div class="menu-item-desc">Frischer Salat mit zartem Hähnchenstreifen und hausgemachtem Dressing</div>
+            </div>
+            <div class="menu-item-price">8,90 €</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-info">
+              <div class="menu-item-name">Thunfisch Salat</div>
+              <div class="menu-item-desc">Mediterraner Salat mit Thunfisch, Kapern und Oliven</div>
+            </div>
+            <div class="menu-item-price">8,90 €</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-info">
+              <div class="menu-item-name">Caesar Salat</div>
+              <div class="menu-item-desc">Klassischer Caesar mit panierten Hähnchenstreifen, Oliven, Parmesan und Pinienkernen</div>
+            </div>
+            <div class="menu-item-price">9,90 €</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PIZZA -->
+      <section class="menu-panel" id="pizza" role="tabpanel">
+        <h2 class="menu-section-heading">🍕 Pizza</h2>
+        <p style="color: var(--text-muted); margin-bottom: 28px; font-style: italic;">
+          Alle Pizzen frisch aus dem Steinofen – knuspriger Boden, feinster Mozzarella, hausgemachte Tomatensauce.
+        </p>
+        <div class="menu-items-grid">
+          <div class="menu-item">
+            <div class="menu-item-info">
+              <div class="menu-item-name">Pizza Curie</div>
+              <div class="menu-item-desc">Mozzarella, Tomatensauce – die klassische Margherita</div>
+            </div>
+            <div class="menu-item-price">6,90 €</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-info">
+              <div class="menu-item-name">Pizza Hepburn</div>
+              <div class="menu-item-desc">Mozzarella, Tomatensauce, Champignons, getrocknete Tomaten</div>
+            </div>
+            <div class="menu-item-price">9,00 €</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-info">
+              <div class="menu-item-name">Pizza Borges</div>
+              <div class="menu-item-desc">Mozzarella, Tomatensauce, italienische Salami</div>
+            </div>
+            <div class="menu-item-price">9,50 €</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-info">
+              <div class="menu-item-name">Pizza Callas</div>
+              <div class="menu-item-desc">Mozzarella, Tomate, Spinat, Paprika, Champignons, Zwiebeln, Oliven</div>
+            </div>
+            <div class="menu-item-price">9,90 €</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-info">
+              <div class="menu-item-name">Pizza Brecht</div>
+              <div class="menu-item-desc">Mozzarella, Tomatensauce, Thunfisch, Zwiebeln</div>
+            </div>
+            <div class="menu-item-price">9,90 €</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-info">
+              <div class="menu-item-name">Pizza Kant</div>
+              <div class="menu-item-desc">Mozzarella, Tomatensauce, Schinken, Ananas oder Champignons (nach Wahl)</div>
+            </div>
+            <div class="menu-item-price">9,90 €</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-info">
+              <div class="menu-item-name">Pizza Adorno</div>
+              <div class="menu-item-desc">Mozzarella, Tomatensauce, Lachs, Lauch, Zwiebeln</div>
+            </div>
+            <div class="menu-item-price">9,90 €</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-info">
+              <div class="menu-item-name">Pizza Kollwitz</div>
+              <div class="menu-item-desc">Mozzarella, Tomatensauce, Gorgonzola, Spinat</div>
+            </div>
+            <div class="menu-item-price">9,90 €</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-info">
+              <div class="menu-item-name">Pizza Sartre</div>
+              <div class="menu-item-desc">Mozzarella, Tomatensauce, scharfe Salami, Gorgonzola, Zwiebeln</div>
+            </div>
+            <div class="menu-item-price">9,90 €</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-info">
+              <div class="menu-item-name">Pizza Dietrich</div>
+              <div class="menu-item-desc">Mozzarella, Tomatensauce, Rucola, Kirschtomaten, Oliven, Parmesan</div>
+            </div>
+            <div class="menu-item-price">9,90 €</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-info">
+              <div class="menu-item-name">Pizza Lempicka</div>
+              <div class="menu-item-desc">Mozzarella, Tomatensauce, Prosciutto crudo, Rucola, Parmesan</div>
+            </div>
+            <div class="menu-item-price">10,50 €</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-info">
+              <div class="menu-item-name">Pizza Elvis</div>
+              <div class="menu-item-desc">Mozzarella, Tomatensauce, Salami, Schinken, Champignons, Peperoni</div>
+            </div>
+            <div class="menu-item-price">10,50 €</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-info">
+              <div class="menu-item-name">Picasso-Calzone</div>
+              <div class="menu-item-desc">Gefüllte Calzone mit Salami, Schinken, Champignons und Peperoni</div>
+            </div>
+            <div class="menu-item-price">11,90 €</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-info">
+              <div class="menu-item-name">Al Pacino-Pide Vegetarisch</div>
+              <div class="menu-item-desc">Türkisches Fladenbrot mit Feta und Champignons</div>
+            </div>
+            <div class="menu-item-price">11,90 €</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-info">
+              <div class="menu-item-name">Al Pacino-Pide</div>
+              <div class="menu-item-desc">Türkisches Fladenbrot mit Knoblauchwurst</div>
+            </div>
+            <div class="menu-item-price">11,90 €</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PASTA -->
+      <section class="menu-panel" id="pasta" role="tabpanel">
+        <h2 class="menu-section-heading">🍝 Pasta</h2>
+        <p style="color: var(--text-muted); margin-bottom: 28px; font-style: italic;">
+          Hausgemachte Pasta – täglich frisch mit sorgfältig ausgewählten Saucen zubereitet.
+        </p>
+        <div class="menu-items-grid">
+          <div class="menu-item">
+            <div class="menu-item-info">
+              <div class="menu-item-name">Penne ai Funghi</div>
+              <div class="menu-item-desc">Penne in cremiger Champignonrahmsauce</div>
+            </div>
+            <div class="menu-item-price">8,00 €</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-info">
+              <div class="menu-item-name">Tortellini Gorgonzola</div>
+              <div class="menu-item-desc">Gefüllte Tortellini in Gorgonzolasauce mit frischem Spinat</div>
+            </div>
+            <div class="menu-item-price">8,90 €</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-info">
+              <div class="menu-item-name">Penne Pollo</div>
+              <div class="menu-item-desc">Penne mit Hähnchenstreifen, Champignons, Rahmsauce und frischen Kräutern</div>
+            </div>
+            <div class="menu-item-price">8,90 €</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-info">
+              <div class="menu-item-name">Spaghetti Carbonara</div>
+              <div class="menu-item-desc">Spaghetti in cremiger Schinken-Rahmsauce mit Zwiebeln und Parmesan</div>
+            </div>
+            <div class="menu-item-price">8,90 €</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-info">
+              <div class="menu-item-name">Spaghetti Bolognese</div>
+              <div class="menu-item-desc">Spaghetti mit hausgemachter Rindfleischbolognese und Parmesan</div>
+            </div>
+            <div class="menu-item-price">8,90 €</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-info">
+              <div class="menu-item-name">Cannelloni</div>
+              <div class="menu-item-desc">Gefüllte Cannelloni mit Feta-Spinach-Füllung, Tomatensauce und Mozzarella überbacken</div>
+            </div>
+            <div class="menu-item-price">8,90 €</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-info">
+              <div class="menu-item-name">Lasagne Bolognese</div>
+              <div class="menu-item-desc">Klassische Lasagne mit Rindfleischbolognese, Béchamel und Mozzarella überbacken</div>
+            </div>
+            <div class="menu-item-price">9,90 €</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- GETRÄNKE -->
+      <section class="menu-panel" id="getraenke" role="tabpanel">
+        <h2 class="menu-section-heading">🥂 Getränke</h2>
+
+        <div class="drinks-grid">
+          <div class="drinks-category">
+            <h3>🥤 Alkoholfrei</h3>
+            <div class="drink-item"><span>San Pellegrino still/sprudel</span><strong>2,00 €</strong></div>
+            <div class="drink-item"><span>Coca-Cola / Light / Zero (0,33L)</span><strong>2,50 €</strong></div>
+            <div class="drink-item"><span>Fanta / Sprite (0,33L)</span><strong>2,50 €</strong></div>
+            <div class="drink-item"><span>Mezzo Mix (0,33L)</span><strong>2,50 €</strong></div>
+            <div class="drink-item"><span>Almdudler</span><strong>2,50 €</strong></div>
+            <div class="drink-item"><span>Fritz-Kola / Fritz-Spritz</span><strong>3,20 €</strong></div>
+            <div class="drink-item"><span>Red Bull</span><strong>3,44 €</strong></div>
+            <div class="drink-item"><span>LemonAid (versch. Sorten)</span><strong>3,75 €</strong></div>
+            <div class="drink-item"><span>ChariTea / Bio Kombucha</span><strong>3,50 €</strong></div>
+            <div class="drink-item"><span>Fruchtsäfte (Mango, Guave, Lychee …)</span><strong>4,90 €</strong></div>
+            <div class="drink-item"><span>Mango Lassi (0,5L)</span><strong>5,00 €</strong></div>
+            <div class="drink-item"><span>Krombacher Alkoholfrei (0,5L)</span><strong>3,50 €</strong></div>
+          </div>
+
+          <div class="drinks-category">
+            <h3>🍺 Bier</h3>
+            <div class="drink-item"><span>Berliner Pilsener (0,33L)</span><strong>3,00 €</strong></div>
+            <div class="drink-item"><span>Berliner Kindl (0,33L)</span><strong>3,00 €</strong></div>
+            <div class="drink-item"><span>Tegernseer (0,5L)</span><strong>3,50 €</strong></div>
+            <div class="drink-item"><span>Erdinger Weizen (0,5L)</span><strong>3,50 €</strong></div>
+            <div class="drink-item"><span>Augustiner Lager (0,5L)</span><strong>3,50 €</strong></div>
+            <div class="drink-item"><span>Quartiermeister Bio Pils</span><strong>3,50 €</strong></div>
+            <div class="drink-item"><span>Lammsbräu (0,33L)</span><strong>3,50 €</strong></div>
+            <div class="drink-item"><span>Erdinger Weizen Alkoholfrei</span><strong>3,50 €</strong></div>
+          </div>
+
+          <div class="drinks-category">
+            <h3>🍷 Wein &amp; Sekt</h3>
+            <div class="drink-item"><span>CAMINO Blanco (0,25L)</span><strong>4,90 €</strong></div>
+            <div class="drink-item"><span>CAMINO Rosado (0,25L)</span><strong>4,90 €</strong></div>
+            <div class="drink-item"><span>CAMINO Tinto (0,25L)</span><strong>4,90 €</strong></div>
+            <div class="drink-item"><span>Conti Zecca Primitivo (1,0L)</span><strong>31,90 €</strong></div>
+            <div class="drink-item"><span>Cabernet Sauvignon (0,75L)</span><strong>37,00 €</strong></div>
+            <div class="drink-item"><span>Saint-Émilion (0,75L)</span><strong>51,90 €</strong></div>
+            <div class="drink-item"><span>Prosecco Treviso (0,75L)</span><strong>36,90 €</strong></div>
+            <div class="drink-item"><span>Moët &amp; Chandon Brut (0,75L)</span><strong>97,00 €</strong></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- DESSERTS -->
+      <section class="menu-panel" id="desserts" role="tabpanel">
+        <h2 class="menu-section-heading">🍨 Desserts &amp; Eis</h2>
+        <div class="menu-items-grid">
+          <div class="menu-item">
+            <div class="menu-item-info">
+              <div class="menu-item-name">Ben &amp; Jerry's – Peanut Butter Cup</div>
+              <div class="menu-item-desc">Vanilla Ice Cream mit Reese's Peanut Butter Cups (465ml)</div>
+            </div>
+            <div class="menu-item-price">7,99 €</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-info">
+              <div class="menu-item-name">Ben &amp; Jerry's – Half Baked</div>
+              <div class="menu-item-desc">Chocolate &amp; Vanilla Ice Cream mit Cookie Dough und Brownies (465ml)</div>
+            </div>
+            <div class="menu-item-price">7,99 €</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-info">
+              <div class="menu-item-name">Ben &amp; Jerry's – Cookie Dough</div>
+              <div class="menu-item-desc">Vanilla Ice Cream mit Chocolate Chip Cookie Dough Stückchen (465ml)</div>
+            </div>
+            <div class="menu-item-price">7,99 €</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-info">
+              <div class="menu-item-name">Ben &amp; Jerry's – Strawberry Cheesecake</div>
+              <div class="menu-item-desc">Strawberry Ice Cream mit Cheesecake Pieces (465ml)</div>
+            </div>
+            <div class="menu-item-price">7,99 €</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-info">
+              <div class="menu-item-name">Ben &amp; Jerry's – Salted Caramel Brownie</div>
+              <div class="menu-item-desc">Sweet Cream Ice Cream mit Brownies und Salted Caramel Swirls (465ml)</div>
+            </div>
+            <div class="menu-item-price">7,99 €</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-info">
+              <div class="menu-item-name">Magnum – Almond</div>
+              <div class="menu-item-desc">Vanilla Ice Cream mit belgischer Schokolade und karamellisierten Mandeln (440ml)</div>
+            </div>
+            <div class="menu-item-price">7,99 €</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-info">
+              <div class="menu-item-name">Magnum – White Chocolate &amp; Cookies</div>
+              <div class="menu-item-desc">Vanilla Ice Cream mit weißer Schokolade und Cookie-Stückchen (440ml)</div>
+            </div>
+            <div class="menu-item-price">7,99 €</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-info">
+              <div class="menu-item-name">Magnum – Classic</div>
+              <div class="menu-item-desc">Vanilla Ice Cream umhüllt von dunkler belgischer Schokolade (440ml)</div>
+            </div>
+            <div class="menu-item-price">7,99 €</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Lieferservice Banner -->
+      <div class="delivery-banner-menu">
+        <h3>Jetzt bequem nach Hause bestellen</h3>
+        <p>Alle Gerichte auch als Lieferservice verfügbar – schnell und frisch geliefert über Lieferando.</p>
+        <a href="https://www.lieferando.de/speisekarte/muckrakers"
+           class="btn btn-outline"
+           target="_blank" rel="noopener noreferrer">
+          🛵&nbsp; Auf Lieferando bestellen
+        </a>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="../Bilder/Logo.PNG"
+               alt="Pizzeria Marienkäfer Logo">
+          <p>
+            Authentische italienische Küche mitten in Berlin –
+            frisch, herzlich und glücklich machend.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="../">Start</a></li>
+            <li><a href="../about/">Über uns</a></li>
+            <li><a href="../speisekarte/">Speisekarte</a></li>
+            <li><a href="../kontakt/">Kontakt &amp; Reservierung</a></li>
+            <li><a href="https://www.lieferando.de/speisekarte/muckrakers" target="_blank" rel="noopener">Lieferservice ↗</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Öffnungszeiten</h4>
+          <div class="hours-row"><span>Mo – Fr</span><strong>10:00 – 24:00</strong></div>
+          <div class="hours-row"><span>Sa – So</span><strong>12:00 – 24:00</strong></div>
+        </div>
+        <div class="footer-col">
+          <h4>Kontakt</h4>
+          <div class="footer-contact-item">
+            <span class="footer-contact-icon">📍</span>
+            <span>Marienstraße 18<br>10117 Berlin-Mitte</span>
+          </div>
+          <div class="footer-contact-item">
+            <span class="footer-contact-icon">📞</span>
+            <a href="tel:+493032303532">030 – 323 035 32</a>
+          </div>
+          <div class="footer-contact-item">
+            <span class="footer-contact-icon">✉️</span>
+            <a href="mailto:kontakt@pizzeria-marienkaefer.de">kontakt@pizzeria-marienkaefer.de</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;width:100%;">
+        <p>© 2025 Pizzeria Marienkäfer · Berlin Mitte. Alle Rechte vorbehalten.</p>
+        <nav class="footer-links">
+          <a href="../impressum/">Impressum</a>
+          <a href="../datenschutz/">Datenschutz</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" aria-label="Zum Seitenanfang">↑</button>
+  <script src="../js/main.js"></script>
+</body>
+</html>
